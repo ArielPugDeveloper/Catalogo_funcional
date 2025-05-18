@@ -1,0 +1,13 @@
+.cart-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.cart-item {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 8px;
+  width: 150px;
+}

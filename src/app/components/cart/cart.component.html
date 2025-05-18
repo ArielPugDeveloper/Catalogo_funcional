@@ -1,0 +1,13 @@
+<h2>Carrito de Compras</h2>
+
+<div *ngIf="cartItems.length === 0">
+  El carrito está vacío.
+</div>
+
+<div class="cart-items">
+  <div *ngFor="let product of cartItems" class="cart-item">
+    <img [src]="product.imageUrl" alt="{{ product.name }}" width="100">
+    <p>{{ product.name }}</p>
+    <p>${{ product.price }}</p>
+  </div>
+</div>
