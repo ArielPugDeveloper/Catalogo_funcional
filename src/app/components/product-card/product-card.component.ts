@@ -2,6 +2,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { Product } from '../../models/product.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-card',
@@ -18,6 +19,11 @@ export class ProductCardComponent {
   addToCart() {
     console.log('Botón clicado - producto emitido:', this.product);
     this.add.emit(this.product);
+  }
+
+  constructor(private router: Router) {}
+  goToDetail() {
+    this.router.navigate(['/producto', this.product.id]);
   }
 }
 

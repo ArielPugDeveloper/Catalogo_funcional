@@ -3,5 +3,6 @@ export interface Product {
   name: string;
   price: number;
   imageUrl: string;
-  category?: string; // opcional si no todos los productos lo tienen
+  category?: string;
+  description?: string; // ✅ nuevo campo
 }

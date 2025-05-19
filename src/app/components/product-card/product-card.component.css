@@ -3,4 +3,19 @@ mat-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: chocolate;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+mat-card-title, mat-card-subtitle {
+  color: black;
+}
+
+button.mat-raised-button {
+  background-color: #3b2f2f;
+  color: white;
+}
+
+button.mat-raised-button:hover {
+  background-color: #5c4033;
 }
