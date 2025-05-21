@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-beasties-container><head><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+export default `<!DOCTYPE html><html lang="en" data-beasties-container><head><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta charset="utf-8">
   <title>Catalogo</title>
   <base href="https://ArielPugDeveloper.github.io/Catalogo_funcional/">
@@ -16,4 +16,4 @@
 <link rel="modulepreload" href="chunk-FS36DUOG.js">
 
 
-</body></html>
+</body></html>`;

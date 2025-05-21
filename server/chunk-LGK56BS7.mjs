@@ -1,0 +1,2 @@
+import './polyfills.server.mjs';
+import{R as a,g as c}from"./chunk-N37INF7U.mjs";var o=class r{cartItems=[];cartSubject=new c([]);constructor(){}getCart(){return this.cartSubject.asObservable()}addToCart(t){this.cartItems.push(t),this.cartSubject.next(this.cartItems)}removeFromCart(t){this.cartItems=this.cartItems.filter(e=>e.id!==t),this.cartSubject.next(this.cartItems)}static \u0275fac=function(e){return new(e||r)};static \u0275prov=a({token:r,factory:r.\u0275fac,providedIn:"root"})};export{o as a};
