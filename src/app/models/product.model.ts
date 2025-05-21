@@ -1,8 +1,9 @@
+///Modelo para obtener los datos de la API
 export interface Product {
   id: number;
-  name: string;
+  title: string;        
   price: number;
-  imageUrl: string;
-  category?: string;
-  description?: string; // ✅ nuevo campo
+  description: string;
+  category: string;
+  image: string;        
 }

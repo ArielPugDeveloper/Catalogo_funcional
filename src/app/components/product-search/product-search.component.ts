@@ -19,6 +19,7 @@ export class ProductSearchComponent implements OnInit {
 
   @Output() search = new EventEmitter<string>();
 
+///Inicializa el autocompletado de búsqueda.
   ngOnInit(): void {
     this.filteredOptions = this.searchControl.valueChanges.pipe(
       startWith(''),
@@ -26,15 +27,18 @@ export class ProductSearchComponent implements OnInit {
     );
   }
 
+///Para filtrar los productos buscados
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
     return this.allOptions.filter(option => option.toLowerCase().includes(filterValue));
   }
 
+///Para actualizar las sugerencias cuando el usuario escribe en el buscador
   updateSuggestions(options: string[]) {
     this.allOptions = options;
   }
 
+///Para encontrar los productos buscados
   onSearch() {
     const term = this.searchControl.value?.trim() || '';
     this.search.emit(term);

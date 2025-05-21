@@ -15,13 +15,15 @@ export class ProductCardComponent {
   @Input() product!: Product;
 
   @Output() add = new EventEmitter<Product>();
-
+///Uso del servicio para añadir productos al carro
   addToCart() {
     console.log('Botón clicado - producto emitido:', this.product);
     this.add.emit(this.product);
   }
 
   constructor(private router: Router) {}
+
+///Para navegar a la pagina de detalles
   goToDetail() {
     this.router.navigate(['/producto', this.product.id]);
   }

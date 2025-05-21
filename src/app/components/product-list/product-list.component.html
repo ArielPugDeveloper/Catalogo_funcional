@@ -1,9 +1,18 @@
 <app-product-search (search)="onSearch($event)"></app-product-search>
 
-<div class="product-list">
+<div *ngIf="loading">Cargando productos...</div>
+<div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+<div class="product-list-container">
   <app-product-card
     *ngFor="let product of filteredProducts"
     [product]="product"
     (add)="addToCart($event)">
   </app-product-card>
+</div>
+
+<div class="pagination-controls">
+  <button (click)="prevPage()" [disabled]="currentPage === 1">Anterior</button>
+  <span>Página {{ currentPage }} de {{ totalPages }}</span>
+  <button (click)="nextPage()" [disabled]="currentPage === totalPages">Siguiente</button>
 </div>

@@ -6,8 +6,13 @@
 
 <div class="cart-items">
   <div *ngFor="let product of cartItems" class="cart-item">
-    <img [src]="product.imageUrl" alt="{{ product.name }}" width="100">
-    <p>{{ product.name }}</p>
-    <p>${{ product.price }}</p>
+    <img [src]="product.image || product.image" alt="{{ product.title || product.title }}" width="100">
+    
+    <div class="cart-item-info">
+      <p><strong>{{ product.title || product.title }}</strong></p>
+      <p>${{ product.price }}</p>
+    </div>
+
+    <button (click)="removeItem(product.id)" class="remove-btn">Eliminar</button>
   </div>
 </div>

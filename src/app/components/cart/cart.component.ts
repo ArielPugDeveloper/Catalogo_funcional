@@ -13,6 +13,7 @@ export class CartComponent implements OnInit {
 
   constructor(private cartService: CartService) {}
 
+  ///Se suscribe al observable para recibir notificaciones cuando el carrito cambia y se actualiza
   ngOnInit(): void {
     this.cartService.getCart().subscribe((items) => {
       this.cartItems = items;
@@ -20,10 +21,7 @@ export class CartComponent implements OnInit {
     });
   }
 
-  clearCart() {
-    this.cartService.clearCart();
-  }
-
+///Para remover productos del carro
   removeItem(id: number) {
     this.cartService.removeFromCart(id);
   }
