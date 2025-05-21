@@ -1,21 +1,10 @@
 import { Routes } from '@angular/router';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { CartComponent } from './components/cart/cart.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
-
-///Rutas con lazy loading
 export const routes: Routes = [
-  {
-    path: '',
-    loadComponent: () => import('./components/product-list/product-list.component')
-      .then(m => m.ProductListComponent)
-  },
-  {
-    path: 'producto/:id',
-    loadComponent: () => import('./components/product-detail/product-detail.component')
-      .then(m => m.ProductDetailComponent)
-  },
-  {
-    path: 'carrito',
-    loadComponent: () => import('./components/cart/cart.component')
-      .then(m => m.CartComponent)
-  }
+  { path: '', component: ProductListComponent },
+  { path: 'producto/:id', component: ProductDetailComponent },
+  { path: 'carrito', component: CartComponent },
 ];
