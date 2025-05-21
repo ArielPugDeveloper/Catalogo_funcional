@@ -1,9 +1,0 @@
-{
-  "routes": {
-    "/Catalogo_funcional": {},
-    "/Catalogo_funcional/carrito": {},
-    "/Catalogo_funcional/producto/custom-id": {},
-    "/Catalogo_funcional/producto/custom-id1": {},
-    "/Catalogo_funcional/producto/etc.": {}
-  }
-}
